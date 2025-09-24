@@ -15,7 +15,7 @@ function isApproximate(approximateNumber, actualNumber) {
 
 function composeMessage(p, t, r, expectedResult, receivedResult) {
   const resultCharacter = isApproximate(receivedResult, expectedResult) ? "✅" : "❌";
-  const message = resultCharacter + "simple interest of principal " + p + ", time " + t + ", rate " + r + " should be " + expectedResult + " and was " + receivedResult + "\n";
+  const message = resultCharacter + "compound interest of principal " + p + ", time " + t + ", rate " + r + " should be " + expectedResult + " and was " + receivedResult + "\n";
   return message;
 }
 
