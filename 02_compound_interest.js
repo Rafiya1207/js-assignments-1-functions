@@ -9,12 +9,12 @@ function compoundInterest(p, t, r) {
   return principalAmount - p;
 }
 
-function isReceivedexpectedResult(receivedResult, expectedResult) {
-  return receivedResult < expectedResult + 1 && receivedResult > expectedResult - 1;
+function isApproximate(approximateNumber, actualNumber) {
+  return approximateNumber < actualNumber + 0.05 || approximateNumber > actualNumber - 0.05;
 }
 
 function composeMessage(p, t, r, expectedResult, receivedResult) {
-  const resultCharacter = isReceivedexpectedResult(receivedResult, expectedResult) ? "✅" : "❌";
+  const resultCharacter = isApproximate(receivedResult, expectedResult) ? "✅" : "❌";
   const message = resultCharacter + "simple interest of principal " + p + ", time " + t + ", rate " + r + " should be " + expectedResult + " and was " + receivedResult + "\n";
   return message;
 }
