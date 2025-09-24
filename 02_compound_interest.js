@@ -27,6 +27,7 @@ function testAll() {
   testCompoundInterest(1000, 2, 10, 210);
   testCompoundInterest(5000, 2, 2, 202);
   testCompoundInterest(1, 1, 100, 1);
+  testCompoundInterest(7500, 2, 7, 1086.75);
 }
 
 function main() {
